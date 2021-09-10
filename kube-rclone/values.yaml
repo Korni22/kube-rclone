@@ -24,13 +24,21 @@ rclone:
   additionalArgs:
     # - --buffer-size=1G
     # - --dir-cache-time=72h
-    # - --drive-chunk-size=256M
-    # - --fast-list
-    # - --log-level=INFO
-    # - --vfs-read-chunk-size=128M
-    # - --vfs-read-chunk-size-limit=off
-    # - --drive-acknowledge-abuse=true
-
+    - --drive-chunk-size=256M
+    - --fast-list
+    - --log-level=INFO
+    - --bufer-size=10M
+    - --vfs-cache-mode=full
+    - --vfs-read-chunk-size=128M
+    - --vfs-read-chunk-size-limit=off
+    - --drive-acknowledge-abuse=true
+    - --vfs-read-ahead=10M
+    - --vfs-read-chunk-size=10M
+    - --vfs-cache-max-size=100G
+    - --uid=1000
+    - --gid=100
+    - --allow-other
+    
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
   # choice for the user. This also increases chances charts run on environments with little
