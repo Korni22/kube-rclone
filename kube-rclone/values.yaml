@@ -6,7 +6,7 @@ images:
     repository: busybox
     tag: latest
   container:
-    repository: hub.docker.com/r/rclone/rclone/
+    repository: docker.io/rclone/rclone
     tag: v1.56.0
   pullPolicy: IfNotPresent
 
