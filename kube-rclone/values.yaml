@@ -7,7 +7,7 @@ images:
     tag: latest
   container:
     repository: docker.io/rclone/rclone
-    tag: v1.56.0
+    tag: 1.56.0
   pullPolicy: IfNotPresent
 
 # imagePullSecrets:
