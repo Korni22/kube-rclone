@@ -8,6 +8,7 @@ images:
   container:
     repository: docker.io/rclone/rclone
     tag: 1.56.0
+    namespace: rclone
   pullPolicy: IfNotPresent
 
 # imagePullSecrets:
