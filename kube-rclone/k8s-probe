@@ -1,0 +1,10 @@
+#!/bin/ash
+
+
+mount=$("stat -c %d /mnt/gd_crypt/")
+parent=$("stat -c %d /mnt/")
+
+if [ "$mount" -eq "$parent" ]; then
+  echo "equal, mount not ready";
+  exit 1
+fi
