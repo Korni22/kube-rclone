@@ -15,7 +15,7 @@ images:
 
 rclone:
   #  remote to mount from rclone config
-  remote: "gc_crypt:"
+  remote: "gd_crypt:"
   # mount path for  remote
   path: /mnt/gd_crypt
   # read only file system for remote (to protect from deletion of files)
