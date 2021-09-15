@@ -54,10 +54,10 @@ spec:
           preStop:
             exec:
               command: ["/bin/sh","-c","fusermount -uz {{ .Values.rclone.path }}"]
-        readinessProbe:
-          exec:
-            command: 
-              - /bin/ash -c "mount=$("stat -c %d /mnt/gd_crypt/"); parent=$("stat -c %d /mnt"); if [ "$mount" -eq "$parent" ]; then exit 1; fi
+        # readinessProbe:
+          # exec:
+            # command: 
+              # - /bin/ash -c "mount=$("stat -c %d /mnt/gd_crypt/"); parent=$("stat -c %d /mnt"); if [ "$mount" -eq "$parent" ]; then exit 1; fi
         securityContext:
           privileged: true
           capabilities:
