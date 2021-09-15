@@ -54,7 +54,7 @@ spec:
           preStop:
             exec:
               command: ["/bin/sh","-c","fusermount -uz {{ .Values.rclone.path }}"]
-        readinessProbe:
+        livenessProbe:
           exec:
             command: 
               - /bin/ash 
