@@ -35,6 +35,16 @@ rclone:
     - --gid=1000
     - --allow-other
 
+  readinessProbe:
+    exec:
+      command: 
+      - mount=$("stat -c %d /mnt/gd_crypt/")
+      - parent=$("stat -c %d /mnt")
+      - if [ "$mount" -eq "$parent" ]; then
+      -   echo "equal, mount not ready";
+      -   exit 1
+      - fi
+
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
   # choice for the user. This also increases chances charts run on environments with little
