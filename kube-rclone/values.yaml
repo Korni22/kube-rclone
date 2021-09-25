@@ -7,7 +7,7 @@ images:
     tag: latest
   container:
     repository: docker.io/rclone/rclone
-    tag: 1.56.0
+    tag: 1.56.1
     namespace: rclone
   pullPolicy: IfNotPresent
 
@@ -15,9 +15,9 @@ images:
 
 rclone:
   #  remote to mount from rclone config
-  remote: "gd_crypt:"
+  remote: "remote:"
   # mount path for  remote
-  path: /mnt/gd_crypt
+  path: /mnt/dir
   # read only file system for remote (to protect from deletion of files)
   readOnly: false
   # additional arguments for customising rclone
