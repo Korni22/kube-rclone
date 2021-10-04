@@ -29,7 +29,7 @@ rclone:
     - --vfs-cache-mode=full
     - --drive-acknowledge-abuse=true
     - --vfs-read-ahead=10M
-    - --vfs-read-chunk-size=10M
+    - --vfs-read-chunk-size=32M
     - --vfs-cache-max-size=100G
     - --uid=1000
     - --gid=1000
