@@ -7,7 +7,7 @@ images:
     tag: latest
   container:
     repository: docker.io/rclone/rclone
-    tag: 1.57.0
+    tag: 1.56.2
     namespace: rclone
   pullPolicy: IfNotPresent
 
@@ -23,7 +23,6 @@ rclone:
   # additional arguments for customising rclone
   # mount options can be found here - https://rclone.org/commands/rclone_mount/#options
   additionalArgs:
-    - --fast-list
     - --log-level=INFO
     - --buffer-size=10M
     - --vfs-cache-mode=full
