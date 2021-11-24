@@ -24,11 +24,11 @@ rclone:
   # mount options can be found here - https://rclone.org/commands/rclone_mount/#options
   additionalArgs:
     - --log-level=INFO
-    - --buffer-size=50M
     - --vfs-cache-mode=full
     - --drive-acknowledge-abuse=true
     - --vfs-read-ahead=50M
     - --vfs-read-chunk-size=32M
+    - --vfs-read-chunk-size-limit=128M
     - --vfs-cache-max-size=100G
     - --no-modtime 
     - --uid=1000
